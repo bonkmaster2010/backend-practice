@@ -7,6 +7,7 @@ export class GreetingController {
 
   @Get()
   getGreeting(@Query() params: {data: string, banned: string}) {
+    console.log(params.data)
     let arr: string[];
     try{arr = JSON.parse(params.data);}catch(e){return {e: "Invalid data"}}  
 
